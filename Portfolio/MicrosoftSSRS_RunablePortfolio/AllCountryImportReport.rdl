@@ -1087,7 +1087,31 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>AllCountryImportReport</Value>
+                    <Value>AllCountry</Value>
+                    <Style>
+                      <FontFamily>Segoe UI Light</FontFamily>
+                      <FontSize>28pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Import</Value>
+                    <ActionInfo>
+                      <Actions>
+                        <Action>
+                          <Drillthrough>
+                            <ReportName>/Report Parts/DrillthroughResultForImport</ReportName>
+                          </Drillthrough>
+                        </Action>
+                      </Actions>
+                    </ActionInfo>
+                    <ToolTip>Show Import Detail Status</ToolTip>
+                    <Style>
+                      <FontFamily>Segoe UI Light</FontFamily>
+                      <FontSize>28pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Report</Value>
                     <Style>
                       <FontFamily>Segoe UI Light</FontFamily>
                       <FontSize>28pt</FontSize>
@@ -1180,5 +1204,6 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportServerUrl>http://win-uao63eai1ns/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>06aee2d1-7275-438f-a6f2-b5346cc50a4c</rd:ReportID>
 </Report>

@@ -48,9 +48,23 @@ Go
 
 CREATE PROCEDURE [dbo].[uspProduceDetailImportData]
 AS
-SELECT b.country ,SUM(a.Value) AS Export,a.buyer from [dbo].[companies] b, [dbo].[trades] a where a.buyer = b.name 
+SELECT b.country ,SUM(a.Value) AS Import,a.buyer from [dbo].[companies] b, [dbo].[trades] a where a.buyer = b.name 
 Group by b.country,a.buyer
 union  select distinct country,'0' As Value ,'NULL' As Buyer from companies a where a.country
  NOT IN (Select b.country  from [dbo].[companies] b, [dbo].[trades] a where a.buyer = b.name)
-Return
 Go
+
+
+Create PROCEDURE [dbo].[uspQueryExportAllCountryName]
+@CountryName nvarchar(20) =''
+AS
+
+WITH exportReport(countryname,export,seller )AS (
+   SELECT b.country ,SUM(a.Value) AS Export,a.seller from [dbo].[companies] b, [dbo].[trades] a where a.seller = b.name 
+  Group by b.country,a.seller
+  union  select distinct country,'0' As Value ,'NULL' As Seller from companies a where a.country
+   NOT IN (Select b.country  from [dbo].[companies] b, [dbo].[trades] a where a.seller = b.name)
+)
+select countryname from exportReport  
+
+Return
