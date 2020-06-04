@@ -6,7 +6,7 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=WIN-UAO63EAI1NS;Initial Catalog=TargetDB</ConnectString>
+        <ConnectString>Data Source=WIN-H6OJBCB04JE;Initial Catalog=TargetDB</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
@@ -1099,7 +1099,7 @@
                       <Actions>
                         <Action>
                           <Drillthrough>
-                            <ReportName>/Report Parts/DrillthroughResultForImport</ReportName>
+                            <ReportName>/DrillthroughResultForImport</ReportName>
                           </Drillthrough>
                         </Action>
                       </Actions>
@@ -1204,6 +1204,6 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportServerUrl>http://win-uao63eai1ns/ReportServer</rd:ReportServerUrl>
+  <rd:ReportServerUrl>http://win-h6ojbcb04je/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>06aee2d1-7275-438f-a6f2-b5346cc50a4c</rd:ReportID>
 </Report>
