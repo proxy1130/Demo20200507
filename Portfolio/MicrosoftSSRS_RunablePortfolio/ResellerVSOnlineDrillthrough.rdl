@@ -6,7 +6,7 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>OLEDB-MD</DataProvider>
-        <ConnectString>Data Source=WIN-H6OJBCB04JE;Initial Catalog=Contoso_Retail</ConnectString>
+        <ConnectString>Data Source=WIN-MJEC0B9LTOH;Initial Catalog=Contoso_Retail</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
