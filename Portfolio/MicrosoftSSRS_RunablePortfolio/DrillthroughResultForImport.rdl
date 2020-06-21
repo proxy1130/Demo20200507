@@ -6,11 +6,11 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=WIN-MJEC0B9LTOH;Initial Catalog=TargetDB</ConnectString>
+        <ConnectString>Data Source=WIN-H6OJBCB04JE;Initial Catalog=TargetDB</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
-      <rd:DataSourceID>93dfc6bb-b8e5-4208-85a4-c91f5a9e54bc</rd:DataSourceID>
+      <rd:DataSourceID>39e9beab-5354-4ae2-8e00-c0d51d9b7784</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -19,14 +19,26 @@
         <DataSourceName>DataSource1</DataSourceName>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>uspProduceDetailImportData</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+            <Functions>
+              <SProc ColumnOwner="uspProduceDetailImportData" />
+            </Functions>
+            <SelectedColumns>
+              <ColumnExpression ColumnOwner="uspProduceDetailImportData" ColumnName="country" />
+              <ColumnExpression ColumnOwner="uspProduceDetailImportData" ColumnName="Export" />
+              <ColumnExpression ColumnOwner="uspProduceDetailImportData" ColumnName="buyer" />
+            </SelectedColumns>
+          </QueryDefinition>
+        </rd:DesignerState>
       </Query>
       <Fields>
         <Field Name="country">
           <DataField>country</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Import">
-          <DataField>Import</DataField>
+        <Field Name="Export">
+          <DataField>Export</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="buyer">
@@ -77,11 +89,11 @@
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Import">
+                <ChartSeries Name="Export">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!Import.Value)</Y>
+                        <Y>=Sum(Fields!Export.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style>
@@ -361,6 +373,8 @@
                   <BackgroundGradientType>TopBottom</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
+                <Position>LeftTop</Position>
+                <DockOutsideChartArea>true</DockOutsideChartArea>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -375,7 +389,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>ImportPercentDistributionBetweenCountry-buyer</Caption>
+                <Caption>ImportPercentDistribution:Country-buyer</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -406,9 +420,9 @@
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.69444in</Top>
-            <Left>9.32569in</Left>
-            <Height>3.76042in</Height>
-            <Width>5.79931in</Width>
+            <Left>9.17639in</Left>
+            <Height>3.79514in</Height>
+            <Width>5.81944in</Width>
             <Style>
               <Border>
                 <Color>#5c5c5c</Color>
@@ -456,11 +470,11 @@
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Import">
+                <ChartSeries Name="Export">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!Import.Value)</Y>
+                        <Y>=Sum(Fields!Export.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style>
@@ -784,9 +798,9 @@
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.69444in</Top>
-            <Left>3.32986in</Left>
-            <Height>3.76042in</Height>
-            <Width>5.88472in</Width>
+            <Left>3.31943in</Left>
+            <Height>3.79514in</Height>
+            <Width>5.8014in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -811,7 +825,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>buyer\country</Value>
+                                <Value>buyer\Country</Value>
                                 <Style>
                                   <FontSize>11pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
@@ -849,26 +863,26 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.01042in</Width>
+                  <Width>0.94444in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.01042in</Width>
+                  <Width>0.94444in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.32639in</Height>
+                  <Height>0.42361in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Import">
+                        <Textbox Name="Export">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Import.Value)</Value>
+                                  <Value>=Sum(Fields!Export.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
                                     <Color>#333333</Color>
@@ -878,7 +892,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Import</rd:DefaultName>
+                          <rd:DefaultName>Export</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -901,7 +915,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Import.Value)</Value>
+                                  <Value>=Sum(Fields!Export.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#333333</Color>
@@ -928,7 +942,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.32639in</Height>
+                  <Height>0.42361in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -939,7 +953,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Import.Value)</Value>
+                                  <Value>=Sum(Fields!Export.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#333333</Color>
@@ -972,7 +986,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Import.Value)</Value>
+                                  <Value>=Sum(Fields!Export.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#333333</Color>
@@ -1014,7 +1028,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>0.32639in</Size>
+                    <Size>0.42361in</Size>
                     <CellContents>
                       <Textbox Name="country">
                         <CanGrow>true</CanGrow>
@@ -1058,7 +1072,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.32639in</Size>
+                    <Size>0.42361in</Size>
                     <CellContents>
                       <Textbox Name="Textbox7">
                         <CanGrow>true</CanGrow>
@@ -1108,7 +1122,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>1.23958in</Size>
+                    <Size>1.24653in</Size>
                     <CellContents>
                       <Textbox Name="buyer">
                         <CanGrow>true</CanGrow>
@@ -1152,7 +1166,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.23958in</Size>
+                    <Size>1.24653in</Size>
                     <CellContents>
                       <Textbox Name="Textbox5">
                         <CanGrow>true</CanGrow>
@@ -1191,8 +1205,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.69444in</Top>
-            <Height>0.97917in</Height>
-            <Width>3.26042in</Width>
+            <Left>0.11458in</Left>
+            <Height>1.27083in</Height>
+            <Width>3.13541in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>

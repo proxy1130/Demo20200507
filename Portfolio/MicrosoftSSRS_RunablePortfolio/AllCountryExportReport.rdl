@@ -6,7 +6,7 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=WIN-MJEC0B9LTOH;Initial Catalog=TargetDB</ConnectString>
+        <ConnectString>Data Source=WIN-H6OJBCB04JE;Initial Catalog=TargetDB</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
@@ -1107,6 +1107,7 @@
                       <FontFamily>Segoe UI Light</FontFamily>
                       <FontSize>28pt</FontSize>
                       <TextDecoration>Underline</TextDecoration>
+                      <Color>Blue</Color>
                     </Style>
                   </TextRun>
                   <TextRun>
@@ -1203,6 +1204,6 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportServerUrl>http://win-uao63eai1ns/ReportServer</rd:ReportServerUrl>
+  <rd:ReportServerUrl>http://win-h6ojbcb04je/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>c313d1fc-7c91-49a9-b4b5-34e3a848d1c0</rd:ReportID>
 </Report>

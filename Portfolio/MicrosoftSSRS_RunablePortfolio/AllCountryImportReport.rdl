@@ -6,7 +6,7 @@
     <DataSource Name="DataSource1">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=WIN-MJEC0B9LTOH;Initial Catalog=TargetDB</ConnectString>
+        <ConnectString>Data Source=WIN-H6OJBCB04JE;Initial Catalog=TargetDB</ConnectString>
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
@@ -1104,7 +1104,6 @@
                         </Action>
                       </Actions>
                     </ActionInfo>
-                    <ToolTip>Show Import Detail Status</ToolTip>
                     <Style>
                       <FontFamily>Segoe UI Light</FontFamily>
                       <FontSize>28pt</FontSize>
