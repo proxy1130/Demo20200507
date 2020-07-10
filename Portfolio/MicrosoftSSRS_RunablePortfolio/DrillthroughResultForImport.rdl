@@ -19,26 +19,14 @@
         <DataSourceName>DataSource1</DataSourceName>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>uspProduceDetailImportData</CommandText>
-        <rd:DesignerState>
-          <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
-            <Functions>
-              <SProc ColumnOwner="uspProduceDetailImportData" />
-            </Functions>
-            <SelectedColumns>
-              <ColumnExpression ColumnOwner="uspProduceDetailImportData" ColumnName="country" />
-              <ColumnExpression ColumnOwner="uspProduceDetailImportData" ColumnName="Export" />
-              <ColumnExpression ColumnOwner="uspProduceDetailImportData" ColumnName="buyer" />
-            </SelectedColumns>
-          </QueryDefinition>
-        </rd:DesignerState>
       </Query>
       <Fields>
         <Field Name="country">
           <DataField>country</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Export">
-          <DataField>Export</DataField>
+        <Field Name="Import">
+          <DataField>Import</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="buyer">
@@ -93,7 +81,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!Export.Value)</Y>
+                        <Y>=Sum(Fields!Import.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style>
@@ -474,7 +462,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!Export.Value)</Y>
+                        <Y>=Sum(Fields!Import.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style>
@@ -882,7 +870,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Export.Value)</Value>
+                                  <Value>=Sum(Fields!Import.Value)</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
                                     <Color>#333333</Color>
@@ -915,7 +903,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Export.Value)</Value>
+                                  <Value>=Sum(Fields!Import.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#333333</Color>
@@ -953,7 +941,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Export.Value)</Value>
+                                  <Value>=Sum(Fields!Import.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#333333</Color>
@@ -986,7 +974,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Export.Value)</Value>
+                                  <Value>=Sum(Fields!Import.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#333333</Color>
